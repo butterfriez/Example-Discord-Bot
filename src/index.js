@@ -3,20 +3,21 @@ import {
     Client,
     REST,
     GatewayIntentBits,
-    EmbedBuilder
+    EmbedBuilder,
+    Routes
 } from "discord.js"
 //this inits the global var for token, and guild id
 import { config } from "dotenv"
 config()
 //here we import commands
-import ExampleCommand from "./commands/ExampleCommand"
+import ExampleCommand from "./commands/ExampleCommand.js"
 
 //token to use the bot
 const token = process.env.TOKEN
 //client id for later use
 const client_id = process.env.CLIENT_ID
 //guild id for also later use
-const guild_id = 'insert server id bot is located in'
+const guild_id = 'insert server id here'
 //new discord bot client
 const client = new Client(
     {
